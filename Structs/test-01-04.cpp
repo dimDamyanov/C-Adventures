@@ -71,6 +71,7 @@ void printTicketDataHeader() {
     std::cout.width(4);    std::cout << std::left << "TiP";
     std::cout.width(4);    std::cout << std::left << "TrP";
     std::cout << std::endl;
+    return;
 }
 
 int main() {
