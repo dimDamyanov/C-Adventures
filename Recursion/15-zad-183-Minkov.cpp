@@ -1,13 +1,14 @@
 #include <iostream>
 
-void inputArray(int *a, int n) {
+
+void inputArray(int *a, int n, int ind=0) {
     if (n == 0) {
         return;
     }
     else {
-        std::cout << "a[" << n - 1 << "]= ";
+        std::cout << "a[" << ind << "]= ";
         std::cin >> *(a + n -1);
-        inputArray(a, n-1);
+        inputArray(a, n-1, ind+1);
     }
 }
 
