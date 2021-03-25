@@ -16,7 +16,7 @@ void evenElementsAverage(int *a, int n, int *sum, int *count) {
         return;
     if (*(a + n - 1) % 2 == 0) {
         *sum += *(a + n - 1);
-        *count++;
+        *count += 1;
     }
     evenElementsAverage(a, n - 1, sum, count);
 }
@@ -28,6 +28,8 @@ int main() {
     int a[n];
     inputArray(a, n);
     evenElementsAverage(a, n, &sum, &count);
+    std::cout << sum << std::endl;
+    std::cout << count << std::endl;
     std::cout << "Even elements average= " << (float) sum / count << std::endl;
     return 0;
 }
