@@ -2,7 +2,6 @@
 
 void sumToNegative(int *a, int n, int *sum) {
     if (*(a + n - 1) < 0) {
-        std::cout << *sum << std::endl;
         return;
     }
     else if (n == 0) {
@@ -31,5 +30,6 @@ int main() {
     inputArray(a, 5);
     int sum = 0;
     sumToNegative(a, 5, &sum);
+    std::cout << sum << std::endl; 
     return 0;
 }
