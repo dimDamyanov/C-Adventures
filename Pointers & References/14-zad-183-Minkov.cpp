@@ -2,9 +2,8 @@
 
 
 void inputArray(int *a, int n, int ind=0) {
-    if (n == 0) {
+    if (n == 0)
         return;
-    }
     else {
         std::cout << "a[" << ind << "]= ";
         std::cin >> *(a + n -1);
@@ -13,9 +12,8 @@ void inputArray(int *a, int n, int ind=0) {
 }
 
 void sumToNegative(int *a, int n, int *neg, int *sum) {
-    if (n == 0) {
+    if (n == 0)
         return;
-    }
     else if (*(a + n - 1) < 0) {
         *neg = *(a + n - 1);
         return;

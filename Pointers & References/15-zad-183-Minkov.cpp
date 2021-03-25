@@ -2,9 +2,8 @@
 
 
 void inputArray(int *a, int n, int ind=0) {
-    if (n == 0) {
+    if (n == 0)
         return;
-    }
     else {
         std::cout << "a[" << ind << "]= ";
         std::cin >> *(a + n -1);
@@ -31,6 +30,6 @@ int main() {
     evenElementsAverage(a, n, &sum, &count);
     std::cout << sum << std::endl;
     std::cout << count << std::endl;
-    std::cout << "Even elements average= " << (float) sum / count << std::endl;
+    std::cout << (float) sum / count << std::endl;
     return 0;
 }
