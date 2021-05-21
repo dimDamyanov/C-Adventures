@@ -3,6 +3,13 @@
 
 using namespace std;
 
+struct Person {
+    char firstName[20];
+    char middleName[20];
+    char lastName[20];
+    char egn[11];
+};
+
 int main() {
     char name[20];
     int age;
