@@ -1,33 +1,20 @@
 #include <iostream>
 #include <fstream>
-#include <cstring>
-#include "person.h"
 
+using namespace std;
 int main() {
-    int n;
-    std::cout << "Count of people: ";
-    std::cin >> n;
+    ifstream inFile;
+    ofstream outFile;
+    inFile.open("text.txt", ios::in);
+    outFile.open("out.txt", ios::out);
 
-    std::ifstream inputFile;
-    inputFile.open("people.txt", std::ios::in);
-
-    std::ofstream outputFile;
-    outputFile.open("people1.txt", std::ios::out);
-
-    Person person;
-    for (int i = 0; i < n; i++) {
-        inputFile >> person.firstName;
-        inputFile >> person.middleName;
-        inputFile >> person.lastName;
-        inputFile >> person.egn;
-
-        outputFile << person.firstName << " ";
-        outputFile << person.middleName << " ";
-        outputFile << person.lastName << " ";
-        outputFile << person.egn << "\n";
+    char line[1000];
+    while(inFile.getline(line, 1000)) {
+        outFile << line;
+        outFile << "\n";
     }
-    inputFile.close();
-    outputFile.close();
 
+    inFile.close();
+    outFile.close();
     return 0;
 }
